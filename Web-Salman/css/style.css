@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
 body {
     height: 100vh;
-    font-family: 'Open+Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     
     display: flex;
@@ -16,17 +12,14 @@ body {
 header.navbar-container {
     max-width: 1200px;
     width: 100%;
-    margin-inline: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
-    padding-block: 1rem;
     z-index: 999;
 }
     
 header.navbar-container .logo img {
-    width: 150px;
+    width: 200px;
 }
 
 header.navbar-container .nav-list ul {
@@ -59,36 +52,47 @@ main {
     max-width: 1200px;
     width: 100%;
     margin-inline: auto;
+    align-items: left;
     padding: 2rem 4rem;
     flex: 1;
-   
     display: flex;
-    align-items: center;
-  }
+    flex-direction: column;
+}
+
+h1 {
+    Text-transform: uppercase;
+}
+
+h2 {
+    text-transform: capitalize;
+}
 
 main .content {
     flex: 1;
     display: flex;
-    align-items: center;
+    box-shadow: 0 2px 8px 2px rgba(52, 52, 52, 0.2);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    
 }
    
 main .content .content-description {
     flex: 1 1;
- }
+}
    
 main .content .content-description .title {
     font-size: 3.5rem;
-    margin-block: 1rem;
 }
    
 main .content .content-description p {
-    line-height: 1.7rem;
-    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: justify;
 }
    
 main .content .content-description button {
     padding: .8rem 2.5rem;
-    margin-block-start: 1rem;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
@@ -100,6 +104,15 @@ main .content .content-description button {
     background-color: #1D2D8C;
     cursor: pointer;
     transition: all .15s ease-in;
+}
+
+main .content .content-description .content-pendidikan{
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+main .content .content-description .isi-pendidikan{
+    font-size: 1rem;
 }
    
 main .content .content-description button:hover {
@@ -116,7 +129,8 @@ main .content .content-image {
 main .content .content-image img {
     margin: auto;
     min-width: 250px;
-    width: 300px;
+    width: 250px;
+    border-radius: 20px;
 }
 
 main aside {
@@ -169,6 +183,41 @@ main aside .social-media li a {
 main aside .social-media li a:hover {
     color: #0583F2;
 }
+
+footer {
+    padding: 15px;
+    color: white;
+    background-color: #1D2D8C;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+#keatas {
+    position: fixed;
+    width:50px;
+    height:50px;
+    bottom: 50px;
+    float: right;
+    right: 50px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #1D2D8C;
+    padding: .5px;
+    border-radius: 100px;
+    transition: all .1s ease-in-out;
+
+}
+
+#keatas:hover {
+    color: #0583F2;
+}
+
+
 /*End of Main Content*/
    
 /* Medium devices (landscape tablets, 768px and down) */

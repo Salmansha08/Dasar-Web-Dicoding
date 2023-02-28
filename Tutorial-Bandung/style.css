@@ -1,38 +1,217 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-h1 { 
-    font-family: 'Quicksand', sans-serif;
-    color: green;
-    margin: 2em;
-    /*margin: 2 em; /*Gaboleh Spasi*/
-
-}
-
-h2 {
-    font-family: 'Quicksand', sans-serif;
-    color: #00a2c6;
-}
-  
-h3 {
-    font-family: 'Quicksand', sans-serif;
-    color: #00a2c6;
-}
- 
-p {
-   font-size: small;
-   font-family: 'Quicksand', sans-serif;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    margin-top: 10px;
-    margin-right: 15px;
-    margin-bottom: 20px;
-    margin-left: 25px;
+    height: 100vh;
+    font-family: 'Open+Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: inline;
+}
+
+header.navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    padding-block: 1rem;
+    z-index: 999;
+}
+    
+header.navbar-container .logo img {
+    height: 150px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+   
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+   
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+   
+header.navbar-container .nav-list li:hover a {
+    background-color: #425c77;
+    color: white;
+}
+
+nav {
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;    
+}
+
+aside {
+    flex: 1;
 }
 
 footer {
     padding: 20px;
     color: white;
-    background-color: #00a2c6
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
 }
+
+footer p {
+    text-align: center;
+}
+
+h1 { 
+    font-family: 'Open+Sans', sans-serif;
+    color: white;
+    /*margin: 2 em; /*Gaboleh Spasi*/
+    font-size: 1.5em;
+	Text-transform: uppercase
+}
+
+h2 {
+    font-family: 'Open+Sans', sans-serif;
+    color: #00a2c6;
+    text-transform: capitalize
+}
+  
+h3 {
+    font-family: 'Open+Sans', sans-serif;
+    color: #00a2c6;
+    text-transform: capitalize
+}
+ 
+p {
+    font-size: small;
+    font-family: 'Open+Sans', sans-serif;
+    font: 1em;
+	text-align: justify;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.profile {
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile p {
+    text-align: center;
+}
+
+.profile img {
+    width: 200px;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+      width: 100%;
+      padding: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+    main aside {
+      align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+   
+    main aside {
+      align-self: stretch;
+    }
+}
+
+/*
+.container {
+    display: flex;
+    gap: 1rem; /*diterapkan secara vertikal dan horizontal dengan nilai yang sama
+    gap: 1rem 2rem; /*diterapkan secara vertikal dan horizontal
+    row-gap: 1rem; /*diterapkan secara horizontal
+    column-gap: 1rem; /*diterapkan secara vertikal
+}
+/*
+.item {
+    order: 5; /*default is 0
+}
+*/
